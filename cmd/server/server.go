@@ -33,6 +33,7 @@ func main() {
 
 	srv := handler.New(graph.NewExecutableSchema(graph.Config{Resolvers: &graph.Resolver{
 		CategoryDB: database.NewCategory(db),
+		CourseDB:   database.NewCourse(db),
 	}}))
 
 	srv.AddTransport(transport.Options{})
